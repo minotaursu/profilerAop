@@ -29,9 +29,6 @@ public class ProfilerAspectAop {
     private static final Log metricsLogger  = LogUtils.METRICS_LOGGER;
     private static final Log warnLog        = LogUtils.WARN_LOGGER;
 
-    /**
-     * 对annotation进行拦截
-     */
     @Around("within(@org.springframework.stereotype.Service *)||"
             + "within(@org.springframework.stereotype.Repository *)")
     public Object profiler(ProceedingJoinPoint pjp) throws Throwable {
